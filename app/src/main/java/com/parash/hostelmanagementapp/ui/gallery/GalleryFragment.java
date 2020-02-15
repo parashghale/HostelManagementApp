@@ -19,6 +19,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.parash.hostelmanagementapp.R;
@@ -30,6 +32,7 @@ public class GalleryFragment extends Fragment {
     Context context;
 
     private GalleryViewModel galleryViewModel;
+
     EditText fullaname, email,phonenumber, locaiton;
 
     Button btnSaveStudent;
@@ -50,6 +53,7 @@ public class GalleryFragment extends Fragment {
         phonenumber=root.findViewById(R.id.etPhoneNumber);
         locaiton=root.findViewById(R.id.etLocation);
         btnSaveStudent=root.findViewById(R.id.btnAddStudent);
+        final FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
         btnSaveStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,9 +93,10 @@ public class GalleryFragment extends Fragment {
                 else {
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
                     HashMap<String,Object> hashMap = new HashMap<>();
+                    hashMap.put("id",reference.push().getKey());
                     hashMap.put("fullname",name);
                     hashMap.put("email",Email);
-                    hashMap.put("phone number",phone);
+                    hashMap.put("phone",phone);
                     hashMap.put("location",Location);
                     hashMap.put("room",room);
                     reference.child("Student").push().setValue(hashMap);

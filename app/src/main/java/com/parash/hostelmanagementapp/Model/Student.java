@@ -1,34 +1,63 @@
 package com.parash.hostelmanagementapp.Model;
 
 public class Student {
-    private String fullname;
-    private String loction;
+    private String name;
+    private String location;
     private String email;
     private String phone;
+    private String id;
     private String room;
 
-    public Student(String fullname, String loction, String email, String phone, String room) {
-        this.fullname = fullname;
-        this.loction = loction;
+    public String getName() {
+        return name;
+    }
+
+    public Student() {
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Student(String name, String location, String email, String phone, String id, String room) {
+        this.name = name;
+        this.location = location;
         this.email = email;
         this.phone = phone;
+        this.id = id;
         this.room = room;
     }
 
     public String getFullname() {
-        return fullname;
+        return name;
     }
 
     public void setFullname(String fullname) {
-        this.fullname = fullname;
+        this.name = fullname;
     }
 
     public String getLoction() {
-        return loction;
+        return location;
     }
 
-    public void setLoction(String loction) {
-        this.loction = loction;
+    public void setLoction(String location) {
+        this.location = location;
     }
 
     public String getEmail() {
