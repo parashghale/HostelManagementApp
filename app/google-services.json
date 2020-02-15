@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "330273335506",
+    "firebase_url": "https://hostelapp-5caf3.firebaseio.com",
+    "project_id": "hostelapp-5caf3",
+    "storage_bucket": "hostelapp-5caf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330273335506:android:74bf831d4e1de87481a50b",
+        "android_client_info": {
+          "package_name": "com.parash.hostelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330273335506-59s71p8kqg1vvaada97beja2pgh6cstt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parash.hostelapp",
+            "certificate_hash": "a08d3ed9e94e40ffc341054227b397d355128f14"
+          }
+        },
+        {
+          "client_id": "330273335506-qthv7dl45333gcp563q6o8lfqp4cpsvq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parash.hostelapp",
+            "certificate_hash": "7afb86133c1b15813b0b9f0d4bb179a9c444ea4d"
+          }
+        },
+        {
+          "client_id": "330273335506-3j483kbnj7026df561sepqj22j1p9qc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGy-R4qAkklf5XoTnELIBrG3BjcFRPKhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330273335506-3j483kbnj7026df561sepqj22j1p9qc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330273335506:android:96f195de3fc8a25e81a50b",
+        "android_client_info": {
+          "package_name": "com.parash.hostelmanagementapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330273335506-0ut1v9masl2buqj329g6sv9cu681lo4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parash.hostelmanagementapp",
+            "certificate_hash": "7afb86133c1b15813b0b9f0d4bb179a9c444ea4d"
+          }
+        },
+        {
+          "client_id": "330273335506-3j483kbnj7026df561sepqj22j1p9qc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGy-R4qAkklf5XoTnELIBrG3BjcFRPKhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330273335506-3j483kbnj7026df561sepqj22j1p9qc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

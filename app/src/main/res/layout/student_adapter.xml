@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/studentName"
+        android:layout_width="150dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Usernam"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/studentLocation"
+        android:layout_width="100dp"
+        android:textSize="17dp"
+        android:text="Maitidevi"
+        android:layout_below="@id/studentName"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/studentPhoneNumber"
+        android:layout_width="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/studentLocation"
+        android:textSize="17dp"
+        android:layout_below="@id/studentName"
+        android:text="2345678"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/studentRoom"
+        android:layout_width="100dp"
+        android:textSize="17dp"
+        android:layout_below="@id/studentLocation"
+        android:text="2345678"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btndeletestudent"
+        android:text="delete"
+        android:layout_alignParentRight="true"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btneditStudnet"
+        android:text="Edit"
+        android:layout_toLeftOf="@id/btndeletestudent"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
