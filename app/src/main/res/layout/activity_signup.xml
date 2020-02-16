@@ -9,6 +9,7 @@
     android:background="#4DA8A8"
     android:layout_height="match_parent"
     tools:context=".SignupActivity">
+
     <EditText
         android:id="@+id/username"
         android:hint="Userame"
@@ -25,10 +26,15 @@
         android:text="Signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/login"
         android:text="Go to login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

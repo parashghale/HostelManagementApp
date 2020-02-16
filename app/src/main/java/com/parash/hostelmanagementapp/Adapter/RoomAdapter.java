@@ -35,7 +35,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Room room = roomList.get(position);
         holder.name.setText(room.getName());
-        holder.price.setText(room.getPrice());
+        holder.price.setText("Rs "+room.getPrice());
         holder.type.setText(room.getType());
         holder.image.setImageResource(room.getImage());
     }
@@ -53,7 +53,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
             super(itemView);
             name=itemView.findViewById(R.id.roomName);
             price =itemView.findViewById(R.id.roomPrice);
-            price =itemView.findViewById(R.id.roomtype);
+            type =itemView.findViewById(R.id.roomtype);
             image=itemView.findViewById(R.id.roomImage);
 
 

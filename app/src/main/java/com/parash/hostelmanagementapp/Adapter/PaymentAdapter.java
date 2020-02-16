@@ -42,19 +42,19 @@ public class PaymentAdapter extends RecyclerView.Adapter<PaymentAdapter.ViewHold
         holder.name.setText(student.getFullname());
         if(student.getRoom()=="Single person room")
         {
-            holder.price.setText("15000");
+            holder.price.setText("Rs: 15000");
         }
         else  if(student.getRoom()=="Two person room")
         {
-            holder.price.setText("12000");
+            holder.price.setText("Rs: 12000");
         }
         else  if(student.getRoom()=="Three person room")
         {
-            holder.price.setText("10000");
+            holder.price.setText("Rs: 10000");
         }
         else
         {
-            holder.price.setText("8000");
+            holder.price.setText("Rs: 8000");
         }
 
         if(holder.checkBox.isChecked())

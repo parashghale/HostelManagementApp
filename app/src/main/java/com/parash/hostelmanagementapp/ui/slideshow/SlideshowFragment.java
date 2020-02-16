@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.parash.hostelmanagementapp.Adapter.RoomAdapter;
@@ -35,6 +36,9 @@ public class SlideshowFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
 
         recyclerView=root.findViewById(R.id.roomRecycleView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         roomList = new ArrayList<>();
         roomList.add(new Room("Platinum room","Single person room","15000",R.drawable.single));
         roomList.add(new Room("Premium room","Two person room","12000",R.drawable.two));

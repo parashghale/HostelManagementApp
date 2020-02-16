@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,24 +30,18 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
     private RecyclerView recyclerView;
     private List<Student> studentList;
     private StudentAdapter studentAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView= view.findViewById(R.id.studentListRecycleView);
-        studentList= new ArrayList<>();
-        loadStudent();
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        return view;
-    }
-    private void loadStudent()
-    {
+        studentList= new ArrayList<>();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Student");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -56,7 +51,7 @@ public class HomeFragment extends Fragment {
                 {
                     Student student = snapshot.getValue(Student.class);
 
-                        studentList.add(student);
+                    studentList.add(student);
 
 
                 }
@@ -69,5 +64,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
+        return view;
     }
+
 }
