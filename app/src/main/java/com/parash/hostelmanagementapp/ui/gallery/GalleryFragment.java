@@ -75,7 +75,7 @@ public class GalleryFragment extends Fragment {
                 }
                 if(TextUtils.isEmpty(Email))
                 {
-                    email.setError("Enter First Name");
+                    email.setError("Please Enter First Name");
                     email.requestFocus();
                     return;
                 }     if(TextUtils.isEmpty(phone))
@@ -91,7 +91,7 @@ public class GalleryFragment extends Fragment {
                 }
                 if(TextUtils.isEmpty(room))
                 {
-                    Toast.makeText(getContext(), "Select a room", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please elect a room", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
