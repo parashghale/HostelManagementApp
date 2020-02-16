@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#DBAAAA"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/roomName"
+        android:text="room"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/roomPrice"
+        android:text="Price"
+        android:layout_toRightOf="@id/roomName"
+        android:textSize="18dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/roomtype"
+        android:text="Price"
+android:layout_below="@id/roomName"
+        android:textSize="18dp"
+        android:layout_width="300dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/roomImage"
+        android:layout_below="@id/roomtype"
+        android:src="@drawable/two"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+</RelativeLayout>
