@@ -39,12 +39,7 @@
         android:layout_alignParentRight="true"
         android:layout_width="80dp"
         android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btneditStudnet"
-        android:text="Edit"
-        android:layout_toLeftOf="@id/btndeletestudent"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"/>
+
 
 
 </RelativeLayout>

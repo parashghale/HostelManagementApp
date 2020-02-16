@@ -99,6 +99,7 @@ public class GalleryFragment extends Fragment {
                     hashMap.put("phone",phone);
                     hashMap.put("location",Location);
                     hashMap.put("room",room);
+                    hashMap.put("rent","notpaid");
                     reference.child("Student").push().setValue(hashMap);
                     Toast.makeText(getContext(), "Student added sucessfully", Toast.LENGTH_SHORT).show();
                 }

@@ -58,7 +58,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
+    <EditText
+        android:text="Rent"
+        android:textSize="20dp"
+        android:textColor="#ffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/rent"
+        android:text="Paid"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btnAddStudent"
         android:layout_width="match_parent"
