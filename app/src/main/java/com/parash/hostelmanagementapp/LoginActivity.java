@@ -56,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                                 else {
                                     Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
-                                }
+                                    Vibrator vibrator = (Vibrator)getSystemService(VIBRATOR_SERVICE);
+                                    vibrator.vibrate(500);                                }
                             }
                         });
             }

@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -215,6 +216,8 @@ public class ProfileActivity extends AppCompatActivity {
                     {
                         progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                        Vibrator vibrator = (Vibrator)getSystemService(VIBRATOR_SERVICE);
+                        vibrator.vibrate(500);
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -227,6 +230,8 @@ public class ProfileActivity extends AppCompatActivity {
         else {
             progressBar.setVisibility(View.INVISIBLE);
             Toast.makeText(getApplicationContext(), "No image selected", Toast.LENGTH_SHORT).show();
+            Vibrator vibrator = (Vibrator)getSystemService(VIBRATOR_SERVICE);
+            vibrator.vibrate(500);
         }
     }
 
