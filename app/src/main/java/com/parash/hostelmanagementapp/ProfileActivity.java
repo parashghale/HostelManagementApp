@@ -59,7 +59,13 @@ public class ProfileActivity extends AppCompatActivity {
     private StorageTask uploadsTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_profile);
+        imageView=findViewById(R.id.ProfileImage);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        storageReference = FirebaseStorage.getInstance().getReference("Uploads");
+        progressBar=findViewById(R.id.progressbar);
+        textView=findViewById(R.id.profileEmail);
 
         textView.setText(firebaseUser.getEmail());
         deleteButton=findViewById(R.id.btnDeleteAccount);
