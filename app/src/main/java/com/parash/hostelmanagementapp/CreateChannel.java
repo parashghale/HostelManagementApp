@@ -13,10 +13,5 @@ public class CreateChannel {
         this.context = context;
     }
     public void CreateChannel(){
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
-            NotificationChannel channel1 = new NotificationChannel(CHANNEL_1,"Channel1", NotificationManager.IMPORTANCE_HIGH);
-            NotificationManager manager = context.getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel1);
-        }
-    }
+
 }
