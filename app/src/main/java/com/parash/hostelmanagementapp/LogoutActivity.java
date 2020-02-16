@@ -8,7 +8,8 @@ public class LogoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreyout.activity_logout);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_logout);
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         finish();
