@@ -91,7 +91,7 @@ public class GalleryFragment extends Fragment {
                 }
                 if(TextUtils.isEmpty(room))
                 {
-                    Toast.makeText(getContext(), "Please select a room", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Select a room", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
