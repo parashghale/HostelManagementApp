@@ -39,8 +39,8 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
         final Student student = studentList.get(position);
         holder.name.setText(student.getFullname());
         holder.location.setText(student.getLoction());
-        holder.phone.setText(student.getPhone());
-        holder.room.setText(student.getRoom());
+        holder.phone.setText("Phone no:" +student.getPhone());
+        holder.room.setText("Room :" +student.getRoom());
         holder.btndelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
