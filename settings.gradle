@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':hostelappwearos'
 rootProject.name='HostelManagementApp'
