@@ -75,7 +75,7 @@ public class GalleryFragment extends Fragment {
                 }
                 if(TextUtils.isEmpty(Email))
                 {
-                    email.setError("Please Enter First Name");
+                    email.setError("Enter First Name");
                     email.requestFocus();
                     return;
                 }     if(TextUtils.isEmpty(phone))
