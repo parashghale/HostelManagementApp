@@ -57,7 +57,7 @@ public class SignupActivity extends AppCompatActivity {
                                             .setValue(user);
 
 
-                                    Toast.makeText(SignupActivity.this, "User created", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignupActivity.this, "User has been created", Toast.LENGTH_SHORT).show();
                                 }
                                 else
                                 {
