@@ -7,6 +7,7 @@ public class Student {
     private String phone;
     private String id;
     private String room;
+    private String roomRent;
 
     public String getName() {
         return name;
@@ -35,13 +36,22 @@ public class Student {
         this.id = id;
     }
 
-    public Student(String name, String location, String email, String phone, String id, String room) {
+    public Student(String name, String location, String email, String phone, String id, String room, String roomRent) {
         this.name = name;
         this.location = location;
         this.email = email;
         this.phone = phone;
         this.id = id;
         this.room = room;
+        this.roomRent = roomRent;
+    }
+
+    public String getRoomRent() {
+        return roomRent;
+    }
+
+    public void setRoomRent(String roomRent) {
+        this.roomRent = roomRent;
     }
 
     public String getFullname() {

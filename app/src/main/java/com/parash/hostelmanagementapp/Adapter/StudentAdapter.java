@@ -56,7 +56,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
             location=itemView.findViewById(R.id.studentLocation);
             room=itemView.findViewById(R.id.studentRoom);
             btndelete=itemView.findViewById(R.id.btndeletestudent);
-            btnEdit=itemView.findViewById(R.id.btneditStudnet);
+
 
         }
     }

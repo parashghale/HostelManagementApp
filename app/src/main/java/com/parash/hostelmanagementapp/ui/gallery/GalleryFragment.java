@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -33,8 +34,10 @@ public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
 
-    EditText fullaname, email,phonenumber, locaiton;
+    String roomRent ="";
 
+    EditText fullaname, email,phonenumber, locaiton;
+    CheckBox rent;
     Button btnSaveStudent;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -53,6 +56,7 @@ public class GalleryFragment extends Fragment {
         phonenumber=root.findViewById(R.id.etPhoneNumber);
         locaiton=root.findViewById(R.id.etLocation);
         btnSaveStudent=root.findViewById(R.id.btnAddStudent);
+        rent=root.findViewById(R.id.rent);
         final FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
         btnSaveStudent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +94,16 @@ public class GalleryFragment extends Fragment {
                     Toast.makeText(getContext(), "Select a room", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 else {
+                    if(rent.isChecked())
+                    {
+                           roomRent="paid";
+                    }
+                    else
+                    {
+                        roomRent="notpaid";
+                    }
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
                     HashMap<String,Object> hashMap = new HashMap<>();
                     hashMap.put("id",reference.push().getKey());
@@ -99,7 +112,7 @@ public class GalleryFragment extends Fragment {
                     hashMap.put("phone",phone);
                     hashMap.put("location",Location);
                     hashMap.put("room",room);
-                    hashMap.put("rent","notpaid");
+                    hashMap.put("rent",roomRent);
                     reference.child("Student").push().setValue(hashMap);
                     Toast.makeText(getContext(), "Student added sucessfully", Toast.LENGTH_SHORT).show();
                 }
