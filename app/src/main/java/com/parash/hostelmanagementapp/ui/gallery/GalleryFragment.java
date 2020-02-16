@@ -114,7 +114,7 @@ public class GalleryFragment extends Fragment {
                     hashMap.put("room",room);
                     hashMap.put("roomRent",roomRent);
                     reference.child("Student").push().setValue(hashMap);
-                    Toast.makeText(getContext(), "Student added sucessfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Sucess", Toast.LENGTH_SHORT).show();
                 }
 
             }
