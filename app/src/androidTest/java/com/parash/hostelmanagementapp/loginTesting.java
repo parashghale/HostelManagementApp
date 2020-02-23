@@ -43,7 +43,7 @@ public class loginTesting {
                 .perform(typeText("parash@gmail.com"));
         closeSoftKeyboard();
         onView(withId(R.id.etpassword))
-                .perform(typeText("wrongpassword"));
+                .perform(typeText(""));
         closeSoftKeyboard();
         onView(withId(R.id.btnLogin))
                 .perform(click());
